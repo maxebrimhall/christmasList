@@ -1,0 +1,45 @@
+:root{
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --accent:#6c5ce7;
+  --muted:#6b7280;
+  --danger:#ef4444;
+  --radius:12px;
+  --shadow: 0 6px 18px rgba(19,24,33,0.06);
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+*{box-sizing:border-box}
+.html,body{height:100%}
+body{
+  margin:0; background:var(--bg); color:#0f172a;
+  display:flex; align-items:center; justify-content:flex-start; padding:48px 24px; flex-direction:column;
+}
+
+.site-header{ width:100%; background:transparent }
+.site-header .container{ width:100%; max-width:680px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:8px 12px }
+.brand{ font-weight:700; color:var(--accent); font-size:1.05rem }
+.nav{ list-style:none; display:flex; gap:8px; margin:0; padding:0 }
+.nav-link{ text-decoration:none; color:var(--muted); padding:8px 10px; border-radius:8px; font-weight:600 }
+.nav-link:hover{ background:rgba(108,92,231,0.06); color:var(--accent) }
+.site-header + .app{ margin-top:6px }
+.app{ width:100%; max-width:680px; background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:24px; }
+.header h1{ margin:0; font-size:1.6rem; letter-spacing:-0.3px }
+.subtitle{ margin:6px 0 18px; color:var(--muted); font-size:.95rem }
+.task-form{ display:flex; gap:12px }
+.task-form input{ flex:1; padding:12px 14px; border-radius:10px; border:1px solid #e6e9ef; font-size:1rem }
+.btn{ background:var(--accent); color:white; border:none; padding:10px 16px; border-radius:10px; cursor:pointer; font-weight:600 }
+.btn:active{ transform:translateY(1px) }
+.task-list{ list-style:none; margin:18px 0 0; padding:0 }
+.task{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 12px; border-radius:10px; border:1px solid #f0f2f5; background:linear-gradient(180deg,rgba(255,255,255,0.6),transparent); margin-bottom:10px }
+.task label{ display:flex; align-items:center; gap:12px; cursor:pointer }
+.task input[type="checkbox"]{ width:18px; height:18px }
+.task .text{ font-size:1rem }
+.task.done .text{ text-decoration:line-through; color:var(--muted) }
+.task .del{ background:transparent; border:none; color:var(--danger); font-size:1.1rem; cursor:pointer }
+.empty{ color:var(--muted); padding:12px }
+
+@media (max-width:420px){
+  .app{ padding:16px }
+  .task-form input{ padding:10px }
+  .btn{ padding:10px 12px }
+}
