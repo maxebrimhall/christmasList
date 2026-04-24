@@ -27,6 +27,8 @@ body{
 .subtitle{ margin:6px 0 18px; color:var(--muted); font-size:.95rem }
 .task-form{ display:flex; gap:12px }
 .task-form input{ flex:1; padding:12px 14px; border-radius:10px; border:1px solid #e6e9ef; font-size:1rem }
+.task-form input:first-of-type{ flex:1 }
+.task-form input:nth-of-type(2){ flex:1 }
 .btn{ background:var(--accent); color:white; border:none; padding:10px 16px; border-radius:10px; cursor:pointer; font-weight:600 }
 .btn:active{ transform:translateY(1px) }
 .task-list{ list-style:none; margin:18px 0 0; padding:0 }
@@ -37,6 +39,19 @@ body{
 .task.done .text{ text-decoration:line-through; color:var(--muted) }
 .task .del{ background:transparent; border:none; color:var(--danger); font-size:1.1rem; cursor:pointer }
 .empty{ color:var(--muted); padding:12px }
+
+/* Table styles */
+.table-container{ margin-top:18px }
+.user-table{ width:100%; border-collapse:collapse }
+.user-table th{ text-align:left; padding:12px; border-bottom:2px solid #e6e9ef; color:var(--muted); font-weight:600; font-size:.9rem }
+.user-table td{ padding:12px; border-bottom:1px solid #f0f2f5 }
+.user-table tr:hover{ background:rgba(108,92,231,0.03) }
+.user-table .empty{ text-align:center }
+
+/* Search bar */
+.search-container{ margin-bottom:18px }
+.search-input{ width:100%; padding:12px 14px; border-radius:10px; border:1px solid #e6e9ef; font-size:1rem }
+.search-input:focus{ outline:none; border-color:var(--accent) }
 
 @media (max-width:420px){
   .app{ padding:16px }

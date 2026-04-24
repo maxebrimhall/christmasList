@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Users - List of Things I Want</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Simple responsive to-do list UI">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="brand">To‑Do</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav">
+          <li><a href="users.html" class="nav-link">Home</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="app">
+    <header class="header">
+      <h1>Users</h1>
+      <p class="subtitle">Manage users here</p>
+    </header>
+
+    <div class="search-container">
+      <input id="search-input" type="text" class="search-input" placeholder="Search users or items..." aria-label="Search">
+    </div>
+
+    <form id="user-form" class="task-form" aria-label="Add User">
+      <input id="user-input" type="text" placeholder="Add user name..." aria-label="User name" required>
+      <input id="item-input" type="text" placeholder="Add item Link..." aria-label="Item" required>
+      <button type="submit" class="btn">Add</button>
+    </form>
+
+    <div class="table-container">
+      <table class="user-table">
+        <thead>
+          <tr>
+            <th>Users</th>
+            <th>Item Link</th>
+          </tr>
+        </thead>
+        <tbody id="user-list">
+          <tr>
+            <td colspan="2" class="empty">No users yet</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script type = text/javascript src = javascript.js></script>
+</body>
+</html>
